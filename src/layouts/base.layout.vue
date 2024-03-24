@@ -39,7 +39,7 @@ const tools = computed<ToolCategory[]>(() => [
         <HeroGradient class="gradient" />
         <div class="text-wrapper">
           <div class="title">
-            IT - TOOLS
+            OneToolbox
           </div>
           <div class="divider" />
           <div class="subtitle">
@@ -61,28 +61,9 @@ const tools = computed<ToolCategory[]>(() => [
 
         <div class="footer">
           <div>
-            IT-Tools
-
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
-              v{{ version }}
-            </c-link>
-
-            <template v-if="commitSha && commitSha.length > 0">
-              -
-              <c-link
-                target="_blank"
-                rel="noopener"
-                type="primary"
-                :href="`https://github.com/CorentinTh/it-tools/tree/${commitSha}`"
-              >
-                {{ commitSha }}
-              </c-link>
-            </template>
-          </div>
-          <div>
             © {{ new Date().getFullYear() }}
-            <c-link target="_blank" rel="noopener" href="https://github.com/CorentinTh">
-              Corentin Thomasset
+            <c-link target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">
+              豫ICP备2023028716号-1
             </c-link>
           </div>
         </div>
@@ -120,7 +101,7 @@ const tools = computed<ToolCategory[]>(() => [
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
+        <!-- <c-tooltip position="bottom" :tooltip="$t('home.support')">
           <c-button
             round
             href="https://www.buymeacoffee.com/cthmsst"
@@ -133,7 +114,7 @@ const tools = computed<ToolCategory[]>(() => [
             {{ $t('home.buyMeACoffee') }}
             <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />
           </c-button>
-        </c-tooltip>
+        </c-tooltip> -->
       </div>
       <slot />
     </template>
